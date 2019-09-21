@@ -1,4 +1,10 @@
 <div>
   <h1>BEAUTY QUOTES</h1>
-  <p>Interact with your favourite  {{ quote }}</p>
+  <ul>
+    <li *ngFor='let quote of quotes'>
+    {{quote}}
+
+    </li>
+    </ul>
+  <p>Interact with your favourite  {{ quotes }}</p>
 </div>
