@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmptyError } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  Quotes = 'The eyes are the windows of the soul';
+  quotes :string[];
+
+  constructor(){
+    this.quotes = ['The eyes are the windows of the soul', 'Stop and smell the roses', 'Everything has beauty, but not everyone sees it']
+  }
 }
