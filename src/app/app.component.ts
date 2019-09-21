@@ -16,7 +16,7 @@ export class AppComponent {
     {id:6,name:'The best part of beauty is that which no picture can express'},
   ];
 
-  constructor(){
-    this.quotes = ['The eyes are the windows of the soul', 'Stop and smell the roses', 'Everything has beauty, but not everyone sees it']
-  }
+//   constructor(){
+//     this.quotes = ['The eyes are the windows of the soul', 'Stop and smell the roses', 'Everything has beauty, but not everyone sees it']
+//   }
 }
