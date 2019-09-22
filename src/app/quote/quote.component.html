@@ -1,11 +1,29 @@
+<div class="container">
+   <h1>BEAUTY QUOTES</h1>
+   <hr>
+   <div class="card">
+      <div class="row">
+         <div class="col-md-8">
+               <div *ngFor='let quote of quotes;let i = index' class="card">
+                     <div id="{{i}}"><em>{{quote.quote}}</em></div>
+                     <span id="author" class="text-warning">--{{quote.author}} </span>
+                     <div class="well">
+                        <div class="text-info">Submitted By: {{quote.name}} <span class="text-warning">{{quote.datesubmitted | countdate}} days ago</span></div>
+                        <div></div>
+                        <div class="row">
+                           <div class="col-md-"><span class="badge badge-pill badge-primary" (click)='upVote(quote)'>upvote</span><span
+                                 id="upvotes">{{quote.upvotescount}}</span></div>
+                           <div class="col-md-"><span class="badge badge-pill badge-warning" (click)='downVote(quote)'>downvote</span><span
+                                 id="downvotes">{{quote.downvotescount}}</span></div>
+                           <div class="col-md-12"><span class="badge badge-danger " id="floatdelete" (click)='deleteQuote($event, i)'>discard quote</span></div>
+                        </div>
+                     </div>
+                  </div>
+         </div>
+         <div class="col-md-4">
+            <app-create-quote (addQuote)="addNewQuote($event)"></app-create-quote>
+         </div>
+      </div>
+   </div>
+</div>
 
-        <h1>BEAUTY QUOTES</h1>
-        <hr>
-        <ul>
-          <div *ngFor='let quote of quotes;let i = index'>
-         <li> {{quote.name}}</li>
-         <button (click)='toggleDetails(i)'>Descriptions</button>
-          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
-          </div>
-          </ul>
-          |<p *ngIf='quotes.length > 5'>Your quote exceeds the required number</p>
