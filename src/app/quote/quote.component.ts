@@ -4,25 +4,38 @@ import{ Quote } from'../quote';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
-
+  isComplete = true;
   quotes :Quote[] = [
-    new Quote(1, 'The eyes are the windows of the soul','What your soul speaks is displayed in your eyes'),
-    new Quote(2,'Stop and smell the roses','At times when you feel overwhelmed first find solutions'),
-    new Quote(3,'Everything has beauty, but not everyone sees it','Like in life most people have eyes but do not see'),
-    new Quote(4,'Real beauty is to be true to oneself','Honesty allows us to be free'),
-    new Quote(5,'Beauty is power; a smile is its sword','Expression of beauty very simple just wear a smile'),
-    new Quote(6,'The best part of beauty is that which no picture can express','You do not have to see my physical appearance to judge how beautiful I am'),
+    new Quote(1, 'John Doe','Hillary Muchengs','The eyes are the windows of the soul', new Date(2019, 9, 9), 0, 0),
+    new Quote(2,'Jane Lucy','Bill Romeo','Stop and smell the roses', new Date(2019, 5, 9), 0, 0),
+    new Quote(3,'Donnel Elton','Grace Ghates','Everything has beauty, but not everyone see it', new Date(2019, 9, 5), 0, 0),
+   
   ];
-  toggleDetails(index){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+
+  upVote(quote) {
+    quote.upvotescount  =  quote.upvotescount + 1;
   }
-  completeGoal(isComplete, index){
+
+  downVote(quote) {
+    quote.downvotescount = quote.downvotescount + 1;
+  }
+  deleteQuote(isComplete, index){
     if (isComplete) {
       this.quotes.splice(index,1);
     }
+  }
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.name = quote.name;
+    quote.author = quote.author;
+    quote.quote = quote.quote;
+    quote.datesubmitted = new Date(quote.datesubmitted)
+    this.quotes.push(quote)
   }
   constructor() { }
 
