@@ -16,10 +16,17 @@ export class QuoteComponent implements OnInit {
     new Quote(5,'Beauty is power; a smile is its sword','Expression of beauty very simple just wear a smile'),
     new Quote(6,'The best part of beauty is that which no picture can express','You do not have to see my physical appearance to judge how beautiful I am'),
   ];
-
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  completeGoal(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit() {}
   }
 
-}
+

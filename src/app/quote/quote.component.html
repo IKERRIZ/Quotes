@@ -5,7 +5,7 @@
           <div *ngFor='let quote of quotes;let i = index'>
          <li> {{quote.name}}</li>
          <button (click)='toggleDetails(i)'>Descriptions</button>
-          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
           </div>
           </ul>
-          |<p *ngIf='goals.length > 5'>Your quote exceeds the required number</p>
+          |<p *ngIf='quotes.length > 5'>Your quote exceeds the required number</p>
