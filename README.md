@@ -25,7 +25,7 @@ To get started, follow the steps below
 
 ## Project live site
  Here is a live link for the project
- https://IKERRIZ.github.io/Quote
+ https://IKERRIZ.github.io/Quotes
 ## Technologies Used
 * HTML
 
