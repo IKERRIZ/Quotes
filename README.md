@@ -1,27 +1,46 @@
 # Quotes
 ## By Faith Okoth
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+This projected was generated with Angular CLI version 8.2.1
 
-## Development server
+ ##Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This application is developed to allow users read quotes,rate it and create a new quote.They may either like or dislike the quote depending on their preferences.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Get Started
 
-## Build
+### Installation
+To get started, follow the steps below
+* Fork this repository from the github.
+* Clone it to your local machine in the terminal, into your text editor either code . or atom . to practice
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Behaviour Driven Development
+| Behavior           |      Input       |  Output
+|-------------       |----------------|---------------|
+|On input            | name            | name         |
+|of your name        | author          | author       |
+|author              | quote           | quote        |
+|and the quote.You   | date            | date         |
+|should be able to post once you submit  | click(submit)   | delete,upvote,downvote|
 
-## Running unit tests
+## Project live site
+ Here is a live link for the project
+ https://IKERRIZ.github.io/Quote
+## Technologies Used
+* HTML
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* CSS
 
-## Running end-to-end tests
+* TYPESCRIPT
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* BOOTSTRAP
+## Support and contact details
+In case of any contribution or concern, please feel free to reach me via email @ okothfaith94@gmail.com
+### License
+The project is under MIT licence
+Copyright (c) {2019} Faith okoth
+  
+                        
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
