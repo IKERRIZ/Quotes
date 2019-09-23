@@ -2,7 +2,7 @@
 ## By Faith Okoth
 This projected was generated with Angular CLI version 8.2.1
 
- ##Description
+ ## Description
 
 This application is developed to allow users read quotes,rate it and create a new quote.They may either like or dislike the quote depending on their preferences.
 
